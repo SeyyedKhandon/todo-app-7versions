@@ -1,24 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div id="myDIV" className="header">
+        <h2 style={{ margin: "5px" }}>My To Do List</h2>
+        <input type="text" id="myInput" placeholder="Title..." />
+        <span onClick={() => {}} className="addBtn">
+          Add
+        </span>
+      </div>
+
+      <ul id="myUL">
+        <li>Hit the gym</li>
+        <li className="checked">
+          Pay bills <span className="close">×</span>
+        </li>
+        <li>Meet George</li>
+        <li>Buy eggs</li>
+        <li>Read a book</li>
+        <li>Organize office</li>
+      </ul>
+    </>
   );
 }
 
