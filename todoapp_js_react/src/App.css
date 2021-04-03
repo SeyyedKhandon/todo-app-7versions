@@ -1,5 +1,3 @@
-
-
 /* Remove margins and padding from the list */
 ul {
   margin: 0;
@@ -38,6 +36,9 @@ ul li.checked {
   background: #888;
   color: #fff;
   text-decoration: line-through;
+}
+ul li.checked:hover {
+  background: #8888887a;
 }
 
 /* Add a "checked" mark when clicked on */

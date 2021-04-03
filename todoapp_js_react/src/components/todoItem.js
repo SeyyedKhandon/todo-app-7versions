@@ -7,8 +7,13 @@ export const TodoItem = ({
     e.stopPropagation();
     onDelete(id, e);
   };
+
   return (
-    <li className={checked ? "checked" : ""} onClick={() => onCheck(id)}>
+    <li
+      title={new Date(id)}
+      className={checked ? "checked" : ""}
+      onClick={() => onCheck(id)}
+    >
       {text}
       <span className="close" onClick={onClose}>
         ×
