@@ -1,5 +1,4 @@
 import { TodoItem } from "./todoItem";
-import { deleteTodoItem, updateCheckStatus } from "./useTodo";
 
 export const TodoList = ({ todoItems, onCheck, onDelete }) => {
   return (
@@ -8,8 +7,8 @@ export const TodoList = ({ todoItems, onCheck, onDelete }) => {
         <TodoItem
           key={todo.id}
           todo={todo}
-          onCheck={() => onCheck(updateCheckStatus(todoItems, todo.id))}
-          onDelete={() => onDelete(deleteTodoItem(todoItems, todo.id))}
+          onCheck={() => onCheck(todo.id)}
+          onDelete={() => onDelete(todo.id)}
         />
       ))}
     </ul>
