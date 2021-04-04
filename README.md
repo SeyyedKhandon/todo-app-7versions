@@ -4,6 +4,9 @@ In this Repo I'm trying to make a good comparison between different approaches o
 in a simple todo-app. It may be overkill to use redux for such very simple app, but I've used this app because it can be simplified to write and read about different approaches.
 
 **Note about** `Redux-Toolkit`:
+
+<img src="./redux-toolkit.png">
+
 The Redux Toolkit package is intended to be the `standard` way to write `Redux logic`. It was originally created to help address three common concerns about Redux:
 
 - "Configuring a Redux store is too complicated"
