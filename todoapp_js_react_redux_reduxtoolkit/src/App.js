@@ -1,32 +1,21 @@
-import { connect } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import { add, check, remove } from "./features/todo/todoSlice";
 import "./App.css";
 import { AddTodo } from "./components/addTodo";
 import { TodoList } from "./components/todoList";
-import { actionTypes } from "./store/actionTypes";
 
-function App(props) {
+function App() {
+  const todoItems = useSelector(state => state.todo.todoItems);
+  const dispatch = useDispatch();
   return (
     <>
-      <AddTodo onAddTodo={props.onAddTodo} />
+      <AddTodo onAddTodo={todoItem => dispatch(add(todoItem))} />
       <TodoList
-        todoItems={props.todoItems}
-        onCheck={props.onCheck}
-        onDelete={props.onDelete}
+        todoItems={todoItems}
+        onCheck={id => dispatch(check(id))}
+        onDelete={id => dispatch(remove(id))}
       />
     </>
   );
 }
-const mapStateToProps = state => {
-  return {
-    todoItems: state.todoItems
-  };
-};
-const mapDispatchToProps = dispatch => {
-  return {
-    onAddTodo: todoItem =>
-      dispatch({ type: actionTypes.ADD_TODO_ITEM, todoItem }),
-    onCheck: id => dispatch({ type: actionTypes.CHECK_TODO_ITEM, id }),
-    onDelete: id => dispatch({ type: actionTypes.REMOVE_TODO_ITEM, id })
-  };
-};
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default App;
