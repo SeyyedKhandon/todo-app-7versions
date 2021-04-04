@@ -1,5 +1,7 @@
 # TODO App using Javascrit React Redux Redux-Toolkit
 
+<img src="./todo-app.png" width="500px">
+
 In this Repo I'm trying to make a good comparison between different approaches of developing react app
 in a simple todo-app. It may be overkill to use redux for such very simple app, but I've used this app because it can be simplified to write and read about different approaches.
 
