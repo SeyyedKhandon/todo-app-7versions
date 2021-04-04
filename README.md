@@ -25,8 +25,12 @@ Redux Toolkit includes these APIs:
 - `createEntityAdapter`: generates a set of reusable reducers and selectors to manage normalized data in the store
 - The `createSelector` utility from the Reselect library, re-exported for ease of use.
 
+[official CodePen Redux-toolkit Counter example](https://codesandbox.io/s/github/reduxjs/redux-essentials-counter-example/tree/master/?from-embed)
+
+##### References
+
 [Reference to Redux-toolkit](https://redux-toolkit.js.org/introduction/getting-started)
 
-[CodePen Redux-toolkit Counter example](https://codesandbox.io/s/github/reduxjs/redux-essentials-counter-example/tree/master/?from-embed)
+[Reference to w3schools TodoList template](https://www.w3schools.com/howto/howto_js_todolist.asp)
 
 **Enjoy!** `Like & ReShare🌹😘`
