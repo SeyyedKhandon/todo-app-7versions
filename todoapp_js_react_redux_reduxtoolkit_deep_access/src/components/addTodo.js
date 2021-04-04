@@ -1,11 +1,14 @@
 import { useState } from "react";
 import { todoGenerator } from "./useTodo";
+import { useDispatch } from "react-redux";
+import * as todoReducer from "../features/todo/todoSlice";
 
-export const AddTodo = ({ onAddTodo }) => {
+export const AddTodo = () => {
   const [text, setText] = useState("");
+  const dispatch = useDispatch();
   const submitTodo = () => {
     if (text === "") return;
-    onAddTodo(todoGenerator(text));
+    dispatch(todoReducer.add(todoGenerator(text)));
     setText("");
   };
   return (

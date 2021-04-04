@@ -1,15 +1,12 @@
 import { TodoItem } from "./todoItem";
+import { useSelector } from "react-redux";
 
-export const TodoList = ({ todoItems, onCheck, onDelete }) => {
+export const TodoList = () => {
+  const todoItems = useSelector(state => state.todo).todoItems;
   return (
     <ul>
       {todoItems.map(todo => (
-        <TodoItem
-          key={todo.id}
-          todo={todo}
-          onCheck={() => onCheck(todo.id)}
-          onDelete={() => onDelete(todo.id)}
-        />
+        <TodoItem key={todo.id} todo={todo} />
       ))}
     </ul>
   );
