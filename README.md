@@ -23,6 +23,7 @@ Redux Toolkit includes these APIs:
 - The `createSelector` utility from the Reselect library, re-exported for ease of use.
 
 [Reference to Redux-toolkit](https://redux-toolkit.js.org/introduction/getting-started)
+
 [CodePen Redux-toolkit Counter example](https://codesandbox.io/s/github/reduxjs/redux-essentials-counter-example/tree/master/?from-embed)
 
 **Enjoy!** `Like & ReShare🌹😘`
