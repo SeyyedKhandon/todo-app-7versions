@@ -1,8 +1,7 @@
-export const TodoItem = ({
-  todo: { text, id, checked },
-  onCheck,
-  onDelete
-}) => {
+import { connect } from "react-redux";
+import { actionTypes } from "../store/actionTypes";
+
+const TodoItem = ({ todo: { text, id, checked }, onCheck, onDelete }) => {
   const onClose = e => {
     e.stopPropagation();
     onDelete(id, e);
@@ -21,3 +20,11 @@ export const TodoItem = ({
     </li>
   );
 };
+
+const mapDispatchToProps = dispatch => {
+  return {
+    onCheck: id => dispatch({ type: actionTypes.CHECK_TODO_ITEM, id }),
+    onDelete: id => dispatch({ type: actionTypes.REMOVE_TODO_ITEM, id })
+  };
+};
+export default connect(null, mapDispatchToProps)(TodoItem);

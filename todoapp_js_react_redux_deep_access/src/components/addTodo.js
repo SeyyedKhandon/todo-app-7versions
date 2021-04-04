@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { connect } from "react-redux";
+import { actionTypes } from "../store/actionTypes";
 import { todoGenerator } from "./useTodo";
 
 export const AddTodo = ({ onAddTodo }) => {
@@ -26,3 +28,11 @@ export const AddTodo = ({ onAddTodo }) => {
     </div>
   );
 };
+
+const mapDispatchToProps = dispatch => {
+  return {
+    onAddTodo: todoItem =>
+      dispatch({ type: actionTypes.ADD_TODO_ITEM, todoItem })
+  };
+};
+export default connect(null, mapDispatchToProps)(AddTodo);
