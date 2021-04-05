@@ -11,6 +11,7 @@ export const AddTodo = ({ onAddTodo }) => {
   return (
     <div className="header">
       <h2 style={{ margin: "5px" }}>JavaScript/React Todo App</h2>
+      <code style={{ margin: "5px" }}>Simple useState(Prop drilling)</code>
       <input
         type="text"
         placeholder="Title..."
