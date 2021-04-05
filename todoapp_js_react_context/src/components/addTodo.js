@@ -1,11 +1,16 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { todoGenerator } from "./useTodo";
-
-export const AddTodo = ({ onAddTodo }) => {
+import { TodoContext } from "../context/todoContext";
+import { actionTypes } from "../context/actionTypes";
+export const AddTodo = () => {
   const [text, setText] = useState("");
+  const { dispatch } = useContext(TodoContext);
   const submitTodo = () => {
     if (text === "") return;
-    onAddTodo(todoGenerator(text));
+    dispatch({
+      type: actionTypes.ADD_TODO_ITEM,
+      todoItem: todoGenerator(text)
+    });
     setText("");
   };
   return (

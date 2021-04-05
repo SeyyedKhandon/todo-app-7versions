@@ -1,23 +1,14 @@
-import { useState } from "react";
 import "./App.css";
 import { AddTodo } from "./components/addTodo";
 import { TodoList } from "./components/todoList";
-import { deleteTodoItem, updateCheckStatus } from "./components/useTodo";
+import { TodoContextProvider } from "./context/todoContext";
 
-function  App() {
-  const [todoItems, setTodoItems] = useState([]);
-  const onAddTodo = todo => {
-    setTodoItems([...todoItems, todo]);
-  };
+function App() {
   return (
-    <>
-      <AddTodo onAddTodo={onAddTodo} />
-      <TodoList
-        todoItems={todoItems}
-        onCheck={id => setTodoItems(updateCheckStatus(todoItems, id))}
-        onDelete={id => setTodoItems(deleteTodoItem(todoItems, id))}
-      />
-    </>
+    <TodoContextProvider>
+      <AddTodo />
+      <TodoList />
+    </TodoContextProvider>
   );
 }
 
