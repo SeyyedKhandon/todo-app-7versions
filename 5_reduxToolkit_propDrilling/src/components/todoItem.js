@@ -5,14 +5,14 @@ export const TodoItem = ({
 }) => {
   const onClose = e => {
     e.stopPropagation();
-    onDelete(id, e);
+    onDelete();
   };
 
   return (
     <li
       title={new Date(id)}
       className={checked ? "checked" : ""}
-      onClick={() => onCheck(id)}
+      onClick={onCheck}
     >
       {text}
       <span className="close" onClick={onClose}>
