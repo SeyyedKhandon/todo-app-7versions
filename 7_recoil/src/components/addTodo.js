@@ -1,9 +1,12 @@
-import { useContext, useState } from "react";
+import { useState } from "react";
+import { useRecoilState } from "recoil";
+import { todoAtom } from "../state/todoAtom";
 import { todoGenerator } from "./util";
-import { TodoContext } from "../context/todoContext";
+
 export const AddTodo = () => {
   const [text, setText] = useState("");
-  const { todoItems, setTodoItems } = useContext(TodoContext);
+  const [todoItems, setTodoItems] = useRecoilState(todoAtom);
+
   const submitTodo = () => {
     if (text === "") return;
     setTodoItems([...todoItems, todoGenerator(text)]);
@@ -12,7 +15,7 @@ export const AddTodo = () => {
   return (
     <div className="header">
       <h2 style={{ margin: "5px" }}>JavaScript/React Todo App</h2>
-      <code style={{ margin: "5px" }}>useContext+useState</code>
+      <code style={{ margin: "5px" }}>Recoil</code>
       <div>
         <input
           type="text"
