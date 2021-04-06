@@ -2,7 +2,7 @@ import { useState } from "react";
 import "./App.css";
 import { AddTodo } from "./components/addTodo";
 import { TodoList } from "./components/todoList";
-import { deleteTodoItem, updateCheckStatus } from "./components/useTodo";
+import { deleteTodoItem, updateCheckStatus } from "./components/util";
 
 function App() {
   const [todoItems, setTodoItems] = useState([]);

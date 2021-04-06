@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { connect } from "react-redux";
 import { actionTypes } from "../store/actionTypes";
-import { todoGenerator } from "./useTodo";
+import { todoGenerator } from "./util";
 
 export const AddTodo = ({ onAddTodo }) => {
   const [text, setText] = useState("");

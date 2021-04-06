@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { todoGenerator } from "./useTodo";
+import { todoGenerator } from "./util";
 import { useDispatch } from "react-redux";
 import * as todoReducer from "../features/todo/todoSlice";
 

@@ -1,4 +1,4 @@
-import { deleteTodoItem, updateCheckStatus } from "../components/useTodo";
+import { deleteTodoItem, updateCheckStatus } from "../components/util";
 import { actionTypes } from "./actionTypes";
 
 const initialState = {

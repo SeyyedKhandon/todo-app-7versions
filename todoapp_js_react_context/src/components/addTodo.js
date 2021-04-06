@@ -1,5 +1,5 @@
 import { useContext, useState } from "react";
-import { todoGenerator } from "./useTodo";
+import { todoGenerator } from "./util";
 import { TodoContext } from "../context/todoContext";
 import { actionTypes } from "../context/actionTypes";
 export const AddTodo = () => {

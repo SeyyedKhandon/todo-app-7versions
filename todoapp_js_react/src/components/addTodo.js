@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { todoGenerator } from "./useTodo";
+import { todoGenerator } from "./util";
 
 export const AddTodo = ({ onAddTodo }) => {
   const [text, setText] = useState("");

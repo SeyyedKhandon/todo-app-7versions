@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { deleteTodoItem, updateCheckStatus } from "../../components/useTodo";
+import { deleteTodoItem, updateCheckStatus } from "../../components/util";
 
 export const todoSlice = createSlice({
   name: "todo",
