@@ -14,18 +14,20 @@ export const AddTodo = ({ onAddTodo }) => {
     <div className="header">
       <h2 style={{ margin: "5px" }}>JavaScript/React Todo App</h2>
       <code style={{ margin: "5px" }}>Redux (Redux Flow)</code>
-      <input
-        type="text"
-        placeholder="Title..."
-        value={text}
-        tabIndex={1}
-        autoFocus
-        onChange={e => setText(e.target.value)}
-        onKeyUp={e => (e.key === "Enter" ? submitTodo() : null)}
-      />
-      <span onClick={submitTodo} className="addBtn">
-        Add
-      </span>
+      <div>
+        <input
+          type="text"
+          placeholder="Title..."
+          value={text}
+          tabIndex={1}
+          autoFocus
+          onChange={e => setText(e.target.value)}
+          onKeyUp={e => (e.key === "Enter" ? submitTodo() : null)}
+        />
+        <span onClick={submitTodo} className="addBtn">
+          Add
+        </span>
+      </div>
     </div>
   );
 };

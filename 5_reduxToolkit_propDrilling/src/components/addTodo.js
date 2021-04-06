@@ -14,18 +14,20 @@ export const AddTodo = ({ onAddTodo }) => {
       <code style={{ margin: "5px" }}>
         Redux Toolkit(Standard way - Prop drilling)
       </code>
-      <input
-        type="text"
-        placeholder="Title..."
-        value={text}
-        tabIndex={1}
-        autoFocus
-        onChange={e => setText(e.target.value)}
-        onKeyUp={e => (e.key === "Enter" ? submitTodo() : null)}
-      />
-      <span onClick={submitTodo} className="addBtn">
-        Add
-      </span>
+      <div>
+        <input
+          type="text"
+          placeholder="Title..."
+          value={text}
+          tabIndex={1}
+          autoFocus
+          onChange={e => setText(e.target.value)}
+          onKeyUp={e => (e.key === "Enter" ? submitTodo() : null)}
+        />
+        <span onClick={submitTodo} className="addBtn">
+          Add
+        </span>
+      </div>
     </div>
   );
 };
